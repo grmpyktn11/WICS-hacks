@@ -1,9 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask Example</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
 </head>
-<body>
-    <h1>Hello, {{name}}!</h1>
+<body class="bg-gray-100 p-6">
+
+    <div class="max-w-6xl mx-auto p-6">
+        <!-- Homepage Title and Search Bar -->
+        <div class="text-center mb-8">
+            <h1 class="mb-2 mt-0 text-5xl font-medium leading-tight text-primary">Homepage</h1>
+        </div>
+
+        <!-- Card Grid -->
+        <div class="max-w-[66%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+             <div class="bg-white p-4 shadow-lg rounded-lg">
+                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://media.tenor.com/5nSKlBlwdkIAAAAe/cat.png" alt="">
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Marie Bette</h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    </div>
+                </a>
+             </div>
+
+            <!-- Card 2 -->
+             <div class="bg-white p-4 shadow-lg rounded-lg">
+                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://media.tenor.com/5nSKlBlwdkIAAAAe/cat.png" alt="">
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">The Lawn</h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">So fun!</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-4 shadow-lg rounded-lg">
+                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://media.tenor.com/5nSKlBlwdkIAAAAe/cat.png" alt="">
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">The End Games</h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">it's the</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>
