@@ -1,4 +1,4 @@
-class Post:
+class post:
     def __init__(self,username,picture,content,hashtag,location):
         self.username = username
         self.picture = picture
@@ -7,4 +7,3 @@ class Post:
         self.location = location
         pass
 
-    
