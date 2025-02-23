@@ -3,33 +3,14 @@
 <head>
     <title>Explore Posts</title>
     
-    <!-- Form to clear the user's itinerary -->
-    <form action="/clear_itinerary" method="POST">
-        <button type="submit">Clear Itinerary</button>
-    </form>
-    
-    <script>
-        // JavaScript function to add a post to the user's itinerary
-        function addToItinerary(location, username, uva, cville) {
-            // Send a POST request with JSON data (location, username, and bus info) to the server
-            fetch('/add_to_itinerary', {
-                method: 'POST',
-                body: JSON.stringify({ location: location, username: username, uva: uva, cville: cville }),  // Sending data in the request body
-                headers: { 'Content-Type': 'application/json' }  // Indicating the request content type is JSON
-            })
-            .then(response => response.json())  // Handle the server's response, expecting JSON
-            .then(data => {
-                // Update the 'itinerary' section with the new HTML returned from the server
-                document.getElementById("itinerary").innerHTML = data.html;
-            });
-        }
-    </script>
+    <script src="{{ url_for('static', filename='js/explore.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/explore.css') }}">
 </head>
 <body>
     <h1>Explore</h1>
 
     <!-- Fixed Sidebar that shows the user's current itinerary -->
-    <div style="position: fixed; right: 10px; top: 50px; background: white; padding: 10px; border: 1px solid #ddd;">
+    <div class="sidebar">
         <h3>Itinerary</h3>
         <div id="itinerary">
             <!-- Loop through the 'itinerary' data passed from the server and display each item -->
@@ -37,27 +18,36 @@
                 <p>{{ item['location'] }} - {{ item['username'] }}<br><strong>Bus:</strong> {{ item['uva'] }}, {{ item['cville'] }}</p>
             {% endfor %}
         </div>
+            <!-- Form to clear the user's itinerary -->
+        <form action="/clear_itinerary" method="POST">
+            <button type="submit">Clear Itinerary</button>
+        </form>
     </div>
 
     <!-- Display Posts Section -->
     <!-- Loop through the 'posts' data passed from the server and show each post -->
-    {% for post in posts %}
-        <div>
-            <!-- Display post location and address -->
-            <h3>{{ post['locationname'] }} - {{ post['address'] }}</h3>
-            <!-- Display username of the person who made the post -->
-            <p><strong>{{ post['username'] }}</strong></p>
-            <!-- Display the content of the post -->
-            <p>{{ post['content'] }}</p>
-            <!-- Display transportation information -->
-            <p><strong>Transportation:</strong> {{ post['uva'] }}, {{ post['cville'] }}</p>
-            <!-- Display the image associated with the post -->
-            <img src="{{ url_for('uploaded_file', filename=post['picture'].replace('img/', '')) }}" alt="Post Image" width="200">
-            <!-- Button that triggers the addToItinerary function when clicked -->
-            <button onclick="addToItinerary('{{ post['locationname'] }}', '{{ post['username'] }}', '{{ post['uva'] }}', '{{ post['cville'] }}')">
-                ➕ Add to Itinerary
-            </button>
-        </div>
-    {% endfor %}
+    <div class="explore-page">
+        {% for post in posts %}
+            <div class="post">
+                <!-- Display the image associated with the post -->
+                <img src="{{ url_for('uploaded_file', filename=post['picture'].replace('img/', '')) }}" alt="Post Image" width="200">
+
+                <div class="post-content">
+                    <!-- Display post location and address -->
+                    <h3>{{ post['locationname'] }} - {{ post['address'] }}</h3>
+                    <!-- Display username of the person who made the post -->
+                    <p><strong>{{ post['username'] }}</strong></p>
+                    <!-- Display the content of the post -->
+                    <p>{{ post['content'] }}</p>
+                    <!-- Display transportation information -->
+                    <p><strong>Transportation:</strong> {{ post['uva'] }}, {{ post['cville'] }}</p>
+                    <!-- Button that triggers the addToItinerary function when clicked -->
+                    <button onclick="addToItinerary('{{ post['locationname'] }}', '{{ post['username'] }}', '{{ post['uva'] }}', '{{ post['cville'] }}')">
+                        ➕ Add to Itinerary
+                    </button>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
