@@ -1,10 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlet's Explore!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
 
-<a href="{{ url_for('explore')}}">
-    <button>explore</button>
-</a> <br><br>
+<div>
+    <div class="cover" style="background-image: url('{{ url_for('static', filename='img/logo.gif') }}');"></div>
 
-<a href="{{ url_for('enterPost')}}"> 
-    <button>add post</button>
-</a>
+    <div class="sticky-header">
+        <h1>Charlet's Explore!</h1>
+    </div>
+
+    <div class="content">
+        <a href="{{ url_for('explore')}}">
+            <button>explore</button>
+        </a> <br><br>
+        
+        <a href="{{ url_for('enterPost')}}"> 
+            <button>add post</button>
+        </a>
+        <h1>Charlet's Explore!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis suscipit urna. Sed sed faucibus orci, id malesuada justo. Suspendisse id ipsum sed diam scelerisque vehicula. In interdum vestibulum quam nec imperdiet. Mauris gravida mauris at sollicitudin auctor. Aliquam tincidunt tellus et varius hendrerit. Duis venenatis hendrerit ullamcorper. Morbi tempor tortor ut augue interdum, ac accumsan justo bibendum. Vivamus ornare risus a nisl luctus, vestibulum pharetra sem egestas. Fusce purus tellus, mollis quis felis id, interdum facilisis velit. Vestibulum massa nisl, rhoncus vel tincidunt placerat, euismod ac nibh.
+
+Nulla rhoncus ultricies sem et lobortis. Vivamus tincidunt facilisis sapien sed dapibus. Vestibulum et lobortis justo, sed feugiat metus. Vestibulum sed velit pretium, viverra magna non, porttitor turpis. In sapien arcu, placerat nec est sit amet, luctus faucibus massa. Sed tempus elementum augue sit amet maximus. Morbi varius enim nec ex imperdiet vehicula. Sed vel sapien metus. Proin et quam interdum, efficitur diam eu, lobortis magna. Donec ac orci viverra, venenatis elit eget, porta dolor. Mauris suscipit id nibh non auctor.
+
+Fusce nec turpis sed ligula rhoncus ultrices non eget neque. Integer convallis, eros et consequat tempus, ante augue ultricies lacus, sed suscipit lectus quam eu velit. Donec nisi lacus, fermentum feugiat velit suscipit, consequat imperdiet ipsum. Donec vehicula dolor tortor. Fusce lobortis est gravida ligula luctus ultrices. Aenean risus erat, finibus vitae bibendum sit amet, ultrices ac nibh. Nulla ac dolor nisi.
+
+Curabitur suscipit mauris tellus, et tincidunt erat vehicula molestie. Nam lorem massa, semper quis ornare sit amet, congue et mauris. Sed vel purus nec nisi tincidunt imperdiet vel eu tortor. Fusce cursus commodo neque sed pretium. Quisque sed magna nec dui scelerisque ultricies. Vestibulum ornare pharetra lacus ac bibendum. Vestibulum luctus efficitur purus, sit amet aliquet dui volutpat et. Morbi diam massa, semper vitae facilisis a, bibendum eu justo.
+
+Etiam congue et dolor malesuada cursus. Nulla pharetra nisl id augue lacinia, lobortis lobortis ex consequat. Vestibulum tempus venenatis est, id rhoncus ligula convallis eget. Phasellus ac bibendum risus. Nulla mollis, metus sed eleifend volutpat, tellus arcu rutrum enim, in pellentesque mauris mauris vitae erat. Donec ultrices libero ac feugiat tincidunt. Fusce bibendum euismod justo a finibus. Fusce a malesuada enim. Suspendisse eu pretium purus. Curabitur dictum vestibulum consectetur. Vivamus vel ultrices sapien. Phasellus interdum, sem non iaculis tincidunt, erat mi hendrerit lectus, vitae molestie lectus nibh a velit. Maecenas faucibus, justo sit amet viverra vestibulum, lacus turpis porta enim, ut laoreet ex diam id lectus. Nulla imperdiet sapien elit, eu imperdiet dolor elementum et.</p>
+    </div>
+</div>
+
+    <!-- Load JavaScript -->
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+</body>
 </html>
