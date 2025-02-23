@@ -39,7 +39,7 @@ def db_initialize():
     connection.commit()
 
 
-# db_initialize()
+db_initialize()
 print("Locations")
 cursor.execute("SELECT * FROM location")
 for row in cursor.fetchall():
