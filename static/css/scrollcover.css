@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9e3bb;
+    overflow-x: hidden;
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-100%);
+    z-index: 10;
+}
+
+.sticky-header.visible {
+    transform: translateY(0);
+}
+
+.cover {
+    height: 100vh; /* Full screen */
+    width: 100%; /* Ensures full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1; /* Ensures it doesn’t overlap wrongly */
+}
+
+.content {
+    text-align: center;
+    color: black;
+    position: relative;
+    /*top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers it perfectly */
+    z-index: 2; /* Ensures it's visible */
+    min-height: 100vh; /* Ensures there's enough scrolling space */
+    padding: 20px;
+    padding-top: 80px
+}
