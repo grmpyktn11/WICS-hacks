@@ -9,20 +9,16 @@
 <body>
 
 <div>
-    <div class="cover" style="background-image: url('{{ url_for('static', filename='img/logo.gif') }}');"></div>
+    <div class="cover" style="background-image: url('{{ url_for('static', filename='img/logo.gif') }}')"></div>
 
     <div class="sticky-header">
-        <h1>Charlet's Explore!</h1>
+        {<ul>
+            <li><a href=http://localhost:5000/explore>Explore!</a></li>
+            <li><a href=http://localhost:5000/enterPost>Add a post!</a></li>
+        </ul>}
     </div>
 
     <div class="content">
-        <a href="{{ url_for('explore')}}">
-            <button>explore</button>
-        </a> <br><br>
-        
-        <a href="{{ url_for('enterPost')}}"> 
-            <button>add post</button>
-        </a>
         <h1>Charlet's Explore!</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis suscipit urna. Sed sed faucibus orci, id malesuada justo. Suspendisse id ipsum sed diam scelerisque vehicula. In interdum vestibulum quam nec imperdiet. Mauris gravida mauris at sollicitudin auctor. Aliquam tincidunt tellus et varius hendrerit. Duis venenatis hendrerit ullamcorper. Morbi tempor tortor ut augue interdum, ac accumsan justo bibendum. Vivamus ornare risus a nisl luctus, vestibulum pharetra sem egestas. Fusce purus tellus, mollis quis felis id, interdum facilisis velit. Vestibulum massa nisl, rhoncus vel tincidunt placerat, euismod ac nibh.
 
