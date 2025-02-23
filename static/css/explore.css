@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Schoolbell&display=swap');
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Jua", "American Typewriter", "Courier", "Courier New", serif;
     background-color: #f9e3bb;
     overflow-x: hidden;
 }
+
 
 .sidebar {
     position: fixed;
