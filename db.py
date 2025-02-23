@@ -24,11 +24,11 @@ def db_initialize():
             ''')
 
     #populate location table
-    connection.execute("INSERT INTO location (name, address, uva, cville) VALUES ('Marie Bette', '105 E Water St, Charlottesville, VA 22902', 'walk', 'Bus 7' )")
-    connection.execute("INSERT INTO location (name, address, uva, cville) VALUES ('KardinalHall', '722 Preston Ave #101, Charlottesville, VA 22903', 'Green Line', 'Bus 9' )")
-    connection.execute("INSERT INTO location (name, address, uva, cville) VALUES ('Dairy Market', '946 Grady Ave, Charlottesville, VA 22903', 'Green Line', 'Bus 9')")
-    connection.execute("INSERT INTO location (name, address, uva, cville) VALUES ('The Lawn', '400 Emmet St S, Charlottesville, VA 22903', 'Yellow Line, Green Line', '')")
-    connection.execute("INSERT INTO location (name, address, uva, cville) VALUES ('The End Games', '390 Hillsdale Dr, Charlottesville, VA 22901', 'walk', 'Bus 7')")
+    connection.execute("INSERT INTO location (name, address, uva, cville) VALUES ('mariebette', '105 E Water St, Charlottesville, VA 22902', 'walk', 'Bus 7' )")
+    connection.execute("INSERT INTO location (name, address, uva, cville) VALUES ('kardinal Hall', '722 Preston Ave #101, Charlottesville, VA 22903', 'Green Line', 'Bus 9' )")
+    connection.execute("INSERT INTO location (name, address, uva, cville) VALUES ('dairy market', '946 Grady Ave, Charlottesville, VA 22903', 'Green Line', 'Bus 9')")
+    connection.execute("INSERT INTO location (name, address, uva, cville) VALUES ('the lawn', '400 Emmet St S, Charlottesville, VA 22903', 'Yellow Line, Green Line', '')")
+    connection.execute("INSERT INTO location (name, address, uva, cville) VALUES ('the end games', '390 Hillsdale Dr, Charlottesville, VA 22901', 'walk', 'Bus 7')")
 
     #populate post table
     connection.execute("INSERT INTO post (username, picture, content, locationname) Values ('kyler5442', 'img/mariebette.JPG', 'love this cafe!!!! always come here on tuesday', 'Marie Bette')")
