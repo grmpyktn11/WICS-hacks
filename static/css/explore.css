@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Schoolbell&display=swap');
+
+
+body {
+    font-family: "Jua", "American Typewriter", "Courier", "Courier New", serif;
+    background-color: #f9e3bb;
+    overflow-x: hidden;
+}
+
+
+.sidebar {
+    position: fixed;
+    right: 20px;
+    top: 50px;
+    width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+    margin-top: 130px;
+    padding: 15px;
+    border: 2px solid #6f74a4;
+    border-radius: 25px;
+    background: #fffcf6;
+}
+
+.explore-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers posts */
+    padding: 20px;
+    margin-right: 320px; /* Leaves space for sidebar */
+}
+
+.post {
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid #6f74a4;
+    border-radius: 25px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #fffcf6;
+    width: 100%;
+    max-width: 600px;
+}
+.post img {
+    width: 120px;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+button {
+    border: none; /* Removes border */
+    background: none; /* Removes background */
+    padding: 0; /* Removes padding */
+    cursor: pointer; /* Ensures it still behaves like a button */
+    display: inline-block; /* Helps prevent stretching */
+}
+
+button img {
+    width: 80px; /* Adjust to your preferred size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes extra space below the image */
+}
+
+/* Media query for small screens */
+@media (max-width: 900px) {
+    .sidebar {
+        position: static; /* Moves sidebar below posts */
+        width: 50%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }
+
+    .explore-page {
+        margin-right: 0; /* Allows full width for posts */
+    }
+}

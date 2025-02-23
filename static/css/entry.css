@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Schoolbell&display=swap');
+
+
+body {
+    font-family: "Jua", "American Typewriter", "Courier", "Courier New", serif;
+    background-color: #f9e3bb;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    max-width: 450px;
+    background: #fffcf6;
+    padding: 20px;
+    border: 2px solid #6f74a4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 80px; /* Adjust to your preferred size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes extra space below the image */
+}

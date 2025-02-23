@@ -1,20 +1,33 @@
-<html>
-    <h1>Data entry</h1><br>
+{%include 'navbar.html'%}
 
-    <form method="POST" enctype="multipart/form-data">
-        <label>Name</label>
-        <input type="text" id="name" name="name"><br><br>
+<html lang="en">
+    <head>
+        <title>Make Post</title>
 
-        <label>location</label>
-        <input type="text" id="location" name="location"><br><br>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/entry.css') }}">
+    </head>
 
-        <label>content</label>
-        <input type="text" id="content" name="content"><br><br>
+    <body>
+        <div class="card">
+            <h1>Create a post!</h1><br>
 
-        <label>photo</label>
-        <input type="file" name="file" accept="image/*"><br><br>
+            <form method="POST" enctype="multipart/form-data">
+                <label>Name</label>
+                <input type="text" id="name" name="name"><br><br>
 
-    <button type="submit">sumbit</button>
-    </form>
+                <label>Location</label>
+                <input type="text" id="location" name="location"><br><br>
 
+                <label>Write your message!</label>
+                <input type="text" id="content" name="content"><br><br>
+
+                <label>Photo</label>
+                <input type="file" name="file" accept="image/*"><br><br>
+
+            <button type="submit">
+                <img src="{{ url_for('static', filename='img/add_post.jpg') }}" alt="Clickable Image" style="width: 100px;">
+            </button>
+            </form>
+        </div>
+    </body>
 </html>

@@ -1,10 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlet's Explore!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</head>
+<body>
 
-<a href="{{ url_for('explore')}}">
-    <button>explore</button>
-</a> <br><br>
+<div>
+    <div class="cover" style="background-image: url('{{ url_for('static', filename='img/logo.gif') }}')"></div>
 
-<a href="{{ url_for('enterPost')}}"> 
-    <button>add post</button>
-</a>
+    <div class="sticky-header">
+        <ul>
+            <li><a href=http://localhost:5000/explore>Explore!</a></li>
+            <li><a href=http://localhost:5000/enterPost>Add a post!</a></li>
+        </ul>
+    </div>
+
+    <div class="content" style="text-align:left">
+        <p class="description">Charlet’s Explore! connects students and residents of Charlottesville, helping them share and discover hidden gems across the city. Users can create an account to post about their favorite activities—whether it's playing spike ball at Ohill or attending poetry nights at Marie Bette.
+            Once users find an event they’re interested in, they can add it to their Itinerary, which provides directions using both the UVA and CAT bus systems—something existing apps like TransLoc don’t offer.
+        </p>
+    </div>
+</div>
+
+</body>
 </html>
