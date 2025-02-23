@@ -11,6 +11,7 @@ body {
     width: 300px;
     max-height: 80vh;
     overflow-y: auto;
+    margin-top: 130px;
     padding: 15px;
     border: 2px solid #6f74a4;
     border-radius: 25px;
@@ -55,6 +56,7 @@ body {
     .sidebar {
         position: static; /* Moves sidebar below posts */
         width: 50%;
+        margin-top: 10px;
         margin-bottom: 20px;
         margin-left: 50px;
     }
