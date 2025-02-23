@@ -15,17 +15,17 @@
                 <label>Name</label>
                 <input type="text" id="name" name="name"><br><br>
 
-                <label>location</label>
+                <label>Location</label>
                 <input type="text" id="location" name="location"><br><br>
 
-                <label>content</label>
+                <label>Write your message!</label>
                 <input type="text" id="content" name="content"><br><br>
 
-                <label>photo</label>
+                <label>Photo</label>
                 <input type="file" name="file" accept="image/*"><br><br>
 
             <button type="submit">
-                <img src="{{ url_for('static', filename='img/add_post.jpg') }}" alt="Clickable Image">
+                <img src="{{ url_for('static', filename='img/add_post.jpg') }}" alt="Clickable Image" style="width: 100px;">
             </button>
             </form>
         </div>

@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Schoolbell&display=swap');
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Jua", "American Typewriter", "Courier", "Courier New", serif;
     background-color: #f9e3bb;
     overflow-x: hidden;
     display: flex;
@@ -10,7 +13,7 @@ body {
 }
 
 .card {
-    max-width: 800px;
+    max-width: 450px;
     background: #fffcf6;
     padding: 20px;
     border: 2px solid #6f74a4;
