@@ -23,7 +23,9 @@
         </div>
             <!-- Form to clear the user's itinerary -->
         <form action="/clear_itinerary" method="POST">
-            <button type="submit">Clear Itinerary</button>
+            <button type="submit">
+                <img src="{{ url_for('static', filename='img/clear_it.jpg') }}" alt="Clickable Image">
+            </button>
         </form>
     </div>
 
@@ -46,7 +48,7 @@
                     <p><strong>Transportation:</strong> {{ post['uva'] }}, {{ post['cville'] }}</p>
                     <!-- Button that triggers the addToItinerary function when clicked -->
                     <button onclick="addToItinerary('{{ post['locationname'] }}', '{{ post['username'] }}', '{{ post['uva'] }}', '{{ post['cville'] }}')">
-                        ➕ Add to Itinerary
+                        <img src="{{ url_for('static', filename='img/add_it.jpg') }}" alt="Clickable Image">
                     </button>
                 </div>
             </div>
